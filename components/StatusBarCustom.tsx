@@ -2,8 +2,8 @@ import React from 'react';
 import {Platform, StatusBar, StyleSheet, View} from "react-native";
 
 // @ts-ignore
-const StatusBarCustom = ({backgroundColor, ...props }) => {
-	return <View style={[styles.statusBar, { backgroundColor }]}>
+const StatusBarCustom = ({backgroundColor, ...props}) => {
+	return <View style={[styles.statusBar, {backgroundColor}]}>
 		<StatusBar translucent backgroundColor={backgroundColor} {...props}/>
 	</View>
 };
