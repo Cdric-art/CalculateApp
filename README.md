@@ -59,8 +59,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Evrard Cédric - [@Cdric-art](https://twitter.com/Cdric_art) - cdric.art@gmail.com
 
-Project Link: [https://pine-apple-server.herokuapp.com/](https://pine-apple-server.herokuapp.com/)
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

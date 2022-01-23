@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Pressable, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import React, { useState } from 'react';
+import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import StatusBarCustom from "./components/StatusBarCustom";
 
 export default function App() {
@@ -26,24 +26,24 @@ export default function App() {
 
 	const calcul = () => {
 		switch (action) {
-			case '+' :
+			case '+':
 				setResult(Number(firstValue.join('')) + Number(secondValue.join('')))
 				break
-			case '-' :
+			case '-':
 				setResult(Number(firstValue.join('')) - Number(secondValue.join('')))
 				break
-			case '/' :
+			case '/':
 				setResult(Number(firstValue.join('')) / Number(secondValue.join('')))
 				break
-			case 'x' :
+			case 'x':
 				setResult(Number(firstValue.join('')) * Number(secondValue.join('')))
 				break
 		}
 	}
 
 	return (
-		<SafeAreaView style={{flex: 1}}>
-			<StatusBarCustom backgroundColor={'#222f3e'} barStyle={'line-content'}/>
+		<SafeAreaView style={{ flex: 1 }}>
+			<StatusBarCustom backgroundColor={'#222f3e'} barStyle={'line-content'} />
 			<View style={styles.container}>
 				<View style={styles.containerResult}>
 					<Text style={styles.result}>{result}</Text>
@@ -56,20 +56,20 @@ export default function App() {
 				<View style={styles.containerCalc}>
 					<View style={styles.row}>
 						<Pressable onPress={() => reset()}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#aec1d4' : '#8395a7'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#aec1d4' : '#8395a7' }, styles.item]}>
 							<Text style={styles.textDark}>AC</Text>
 						</Pressable>
 						<Pressable
-							style={({pressed}) => [{backgroundColor: pressed ? '#aec1d4' : '#8395a7'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#aec1d4' : '#8395a7' }, styles.item]}>
 							<Text style={styles.textDark}>√</Text>
 						</Pressable>
 						<Pressable
-							style={({pressed}) => [{backgroundColor: pressed ? '#aec1d4' : '#8395a7'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#aec1d4' : '#8395a7' }, styles.item]}>
 							<Text style={styles.textDark}>%</Text>
 						</Pressable>
 						<Pressable onPress={() => setAction('/')}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#fff' : '#ff9f43'}, styles.item]}>
-							{({pressed}) => (
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#fff' : '#ff9f43' }, styles.item]}>
+							{({ pressed }) => (
 								pressed ? <Text style={styles.textLightPressed}>÷</Text>
 									: <Text style={styles.textLight}>÷</Text>
 							)}
@@ -77,20 +77,20 @@ export default function App() {
 					</View>
 					<View style={styles.row}>
 						<Pressable onPress={() => handleValue(7)}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#60707f' : '#434e58'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#60707f' : '#434e58' }, styles.item]}>
 							<Text style={styles.textLight}>7</Text>
 						</Pressable>
 						<Pressable onPress={() => handleValue(8)}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#60707f' : '#434e58'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#60707f' : '#434e58' }, styles.item]}>
 							<Text style={styles.textLight}>8</Text>
 						</Pressable>
 						<Pressable onPress={() => handleValue(9)}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#60707f' : '#434e58'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#60707f' : '#434e58' }, styles.item]}>
 							<Text style={styles.textLight}>9</Text>
 						</Pressable>
 						<Pressable onPress={() => setAction('x')}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#fff' : '#ff9f43'}, styles.item]}>
-							{({pressed}) => (
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#fff' : '#ff9f43' }, styles.item]}>
+							{({ pressed }) => (
 								pressed ? <Text style={styles.textLightPressed}>x</Text>
 									: <Text style={styles.textLight}>x</Text>
 							)}
@@ -98,20 +98,20 @@ export default function App() {
 					</View>
 					<View style={styles.row}>
 						<Pressable onPress={() => handleValue(4)}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#60707f' : '#434e58'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#60707f' : '#434e58' }, styles.item]}>
 							<Text style={styles.textLight}>4</Text>
 						</Pressable>
 						<Pressable onPress={() => handleValue(5)}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#60707f' : '#434e58'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#60707f' : '#434e58' }, styles.item]}>
 							<Text style={styles.textLight}>5</Text>
 						</Pressable>
 						<Pressable onPress={() => handleValue(6)}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#60707f' : '#434e58'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#60707f' : '#434e58' }, styles.item]}>
 							<Text style={styles.textLight}>6</Text>
 						</Pressable>
 						<Pressable onPress={() => setAction('-')}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#fff' : '#ff9f43'}, styles.item]}>
-							{({pressed}) => (
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#fff' : '#ff9f43' }, styles.item]}>
+							{({ pressed }) => (
 								pressed ? <Text style={styles.textLightPressed}>-</Text>
 									: <Text style={styles.textLight}>-</Text>
 							)}
@@ -119,20 +119,20 @@ export default function App() {
 					</View>
 					<View style={styles.row}>
 						<Pressable onPress={() => handleValue(3)}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#60707f' : '#434e58'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#60707f' : '#434e58' }, styles.item]}>
 							<Text style={styles.textLight}>3</Text>
 						</Pressable>
 						<Pressable onPress={() => handleValue(2)}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#60707f' : '#434e58'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#60707f' : '#434e58' }, styles.item]}>
 							<Text style={styles.textLight}>2</Text>
 						</Pressable>
 						<Pressable onPress={() => handleValue(1)}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#60707f' : '#434e58'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#60707f' : '#434e58' }, styles.item]}>
 							<Text style={styles.textLight}>1</Text>
 						</Pressable>
 						<Pressable onPress={() => setAction('+')}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#fff' : '#ff9f43'}, styles.item]}>
-							{({pressed}) => (
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#fff' : '#ff9f43' }, styles.item]}>
+							{({ pressed }) => (
 								pressed ? <Text style={styles.textLightPressed}>+</Text>
 									: <Text style={styles.textLight}>+</Text>
 							)}
@@ -140,16 +140,16 @@ export default function App() {
 					</View>
 					<View style={styles.row}>
 						<Pressable onPress={() => handleValue(0)}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#60707f' : '#434e58'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#60707f' : '#434e58' }, styles.item]}>
 							<Text style={styles.textLight}>0</Text>
 						</Pressable>
 						<Pressable onPress={() => handleValue('.')}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#60707f' : '#434e58'}, styles.item]}>
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#60707f' : '#434e58' }, styles.item]}>
 							<Text style={styles.textLight}>.</Text>
 						</Pressable>
 						<Pressable onPress={() => calcul()}
-						           style={({pressed}) => [{backgroundColor: pressed ? '#fff' : '#ff9f43'}, styles.item, styles.itemEqual]}>
-							{({pressed}) => (
+							style={({ pressed }) => [{ backgroundColor: pressed ? '#fff' : '#ff9f43' }, styles.item, styles.itemEqual]}>
+							{({ pressed }) => (
 								pressed ? <Text style={styles.textLightPressed}>=</Text>
 									: <Text style={styles.textLight}>=</Text>
 							)}
